@@ -1,8 +1,7 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import Form from '../forms/Form';
-import Header from '../layout/Header';
 import RandomDisplay from './RandomDisplay';
 
 const Dashboard = ({isAuthenticated}) => {
@@ -10,13 +9,13 @@ const Dashboard = ({isAuthenticated}) => {
         return <Redirect to='/' />;
     }
     return(
-        <div className='container'>
-         <Header />
-         <section className='dashboard--container'>
+        <Fragment>
+        <section className='dashboard--container'>
             <Form />
             <RandomDisplay />
-         </section>
-        </div>
+        </section>
+        </Fragment>
+
         )
     };
 

@@ -2,12 +2,13 @@ import React, {useEffect, useState} from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
+import {saveWorkouts} from '../../actions/workouts';
 import SaveButton from '../layout/SaveButton';
 import uuid from 'uuid';
 
 
-const RandomDisplay = ({ workouts }) => {
-    const workoutArr = Object.values(workouts);
+const RandomDisplay = ({ workouts: {tempWorkouts}, saveWorkouts }) => {
+    const workoutArr = Object.values(tempWorkouts);
     // eslint-disable-next-line no-use-before-define
     useEffect(() => {
         const generatedWorkouts = document.getElementsByClassName('random-workout--item');
@@ -22,17 +23,12 @@ const RandomDisplay = ({ workouts }) => {
 	})
     const res = {};
     let array = [];
-    const handleSubmit = () => {
-        // array.forEach(obj => {
-        //     res[obj.name] = obj.name;
-        //     res[obj.url] = obj.url;
-        // })
-        // setSavedWorkouts(prevState => ({
-        //     ...prevState,
-        //     ...res
-        // }))
-        // setCurrentWorkouts({});
-        // setSubmit({status: 'Goto saved workouts to view & save list'});
+    const handleSubmit = (tempWorkouts) => {
+        array.forEach(obj => {
+            res[obj.name] = obj.name;
+            res[obj.url] = obj.url;
+        })
+        saveWorkouts(array)
     }
     const resetForm = () => {
         // setSavedWorkouts({});
@@ -58,7 +54,9 @@ const RandomDisplay = ({ workouts }) => {
         </div>
     <div className='button--container'>
         {/* <span>{submit.status}</span> */}
-            <button className=' button button__save' onClick={handleSubmit} >Add To Workout List</button>
+        {workoutArr.length !== 0 && <p className='random-workout__placeholder'>Add to workout list to generate more</p>}
+
+            <button className=' button button__save' onClick={e => handleSubmit(tempWorkouts)} >Add To Workout List</button>
         <button className='button button__reset' onClick={resetForm}>Reset</button>
     </div>
     <NavLink exact={true} to='help'>Help</NavLink>
@@ -71,4 +69,4 @@ const mapStateToProps = state => ({
     workouts: state.workouts
 });
 
-export default connect(mapStateToProps)(RandomDisplay);
+export default connect(mapStateToProps, {saveWorkouts})(RandomDisplay);

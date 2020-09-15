@@ -2,10 +2,10 @@ import React, { useContext, useState} from 'react';
 import { connect } from 'react-redux';
 import WorkoutContext from '../../context/workoutContext';
 import workoutReducer from '../../reducers/workoutReducer';
-import {saveWorkouts} from '../../actions/workouts';
+import {saveTempWorkouts} from '../../actions/workouts';
 
 //added
-  const Form = ({saveWorkouts, workouts}) => {
+  const Form = ({saveTempWorkouts, workouts}) => {
     const workoutArr = Object.values(workouts);
     const worksoutContext = useContext(WorkoutContext);
     const [state, setState] = useState({
@@ -20,7 +20,7 @@ import {saveWorkouts} from '../../actions/workouts';
      const onSubmit = (e) => {
         e.preventDefault();
         const workoutArray = workoutReducer(state, worksoutContext);
-        saveWorkouts(workoutArray)
+        saveTempWorkouts(workoutArray)
      };
                 return (
                     // < WorkoutContext.Provider>
@@ -46,8 +46,11 @@ import {saveWorkouts} from '../../actions/workouts';
                     // </WorkoutContext.Provider>
         );
 };
+
+
+
 const mapStateToProps = state => ({
     workouts: state.workouts
   });
-        export default connect(mapStateToProps, { saveWorkouts })(Form);
+        export default connect(mapStateToProps, { saveTempWorkouts })(Form);
     

@@ -10,6 +10,7 @@ export const LOGOUT = 'LOGOUT';
 export const CLEAR_PROFILE = 'CLEAR_PROFILE';
 export const ACCOUNT_DELETED = 'ACCOUNT_DELETED';
 export const SAVE_WORKOUTS = 'SAVE_WORKOUTS';
+export const SAVE_TEMP_WORKOUTS = 'SAVE_TEMP_WORKOUTS';
 export const CLEAR_WORKOUTS = 'CLEAR_WORKOUTS';
 
 

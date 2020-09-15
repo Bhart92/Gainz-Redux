@@ -1,18 +1,27 @@
-import { SAVE_WORKOUTS, CLEAR_WORKOUTS } from '../actions/types';
+import { SAVE_TEMP_WORKOUTS, SAVE_WORKOUTS, CLEAR_WORKOUTS } from '../actions/types';
 
 
-const initialState = [];
+const initialState = {
+    tempWorkouts: [],
+    savedWorkouts: []
+};
 
 
-export default function(state = initialState, action) {
+export default function(state = initialState, action, previousState) {
     const { type, payload } = action;
 
     
     switch(type){
-        case SAVE_WORKOUTS:
+        case SAVE_TEMP_WORKOUTS:
                 return {
                     ...state,
-                    ...payload
+                    tempWorkouts: {...payload}
+                }; 
+        case SAVE_WORKOUTS:
+            return {
+                    ...state,
+                    tempWorkouts: [],
+                     savedWorkouts: [...state.savedWorkouts, ...payload]
                 };  
         case CLEAR_WORKOUTS:
             return {
