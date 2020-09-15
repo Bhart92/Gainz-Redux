@@ -1,0 +1,46 @@
+.header{
+    align-items: center;
+    background: $grey;
+    box-shadow: 1px 0px 5px $orange, -1px 0px 5px $orange;
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    left: 0;
+    padding: 0 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    ul{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: row-reverse;
+      li{
+        margin: 20px;
+      }
+    }
+  }
+  .header--h1{
+    color: $white;
+    font-family: $font-fugaz;
+    padding-top: 10px;
+    position: relative;
+    margin-left: 35px;
+    a{
+      font-size:3.5rem;
+    }
+  }
+  .fa-dumbbell{
+    font-size: 2.5rem;
+    left: -35px;
+    position: absolute;
+    top: 45%;
+    transform: rotate(60deg) translate(-50%, -50%);
+    &:nth-of-type(2){
+        top: 50%;
+        left: -45px;
+  
+        transform: rotate(0deg);
+  
+    }
+  }

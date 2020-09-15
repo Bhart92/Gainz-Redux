@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://bhart:Bella2121@cluster0.eh58n.mongodb.net/cluster0?retryWrites=true&w=majority",
+    "jwtSecret": "theOneAndOnlySecret"   
+}

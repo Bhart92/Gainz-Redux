@@ -1,0 +1,96 @@
+.button-container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  .button{
+    color: $white;
+    font-size: 2rem;
+    font-weight: 500;
+    height: 85px;
+    letter-spacing: 5px;
+    outline: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-transform: uppercase;
+    transition: all .35s ease;
+    width: 60%;
+  }
+  .button__reset{
+    background: $orange;
+    border: 2px solid $orange;
+    margin: .5px;
+    &:hover{
+      background: transparent;
+      border: 2px solid $orange;
+      color: $orange;
+     }
+  }
+  .button__generate{
+    background: $blue;
+    border: 2px solid $blue;
+    &:hover{
+     background: transparent;
+     border: 2px solid $blue;
+     color: $blue;
+      }
+  }
+  .button__save{
+    background: $green;
+    border: 2px solid $green;
+    margin: 5px;
+    &:hover{
+     background: transparent;
+     border: 2px solid $green;
+     color: $green;
+    }
+  }
+  .button__save__individual-workout{
+    background: none;
+    border: 1px solid $green;
+    border-radius: 10px;
+    color: $green;
+    font-weight: 300;
+    padding: 5px 10px;
+    transition: all .35s ease;
+    &:hover{
+     background: $green;
+     border: 1px solid transparent;
+     color: $grey; 
+    }
+  }
+  .button--container{
+    align-items: center;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 35px;
+    width: 100%;
+    span{
+      color:$green;
+      font-size: 1.4rem;
+      font-style: italic;
+     }
+  }
+  .button__save__individual-workout{
+    &:disabled{
+     background: $black;
+     border: $grey;
+     color: $grey;
+    }
+  }
+  .button__landing{
+    color: #EEE;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 5px;
+    margin: 15px auto;
+    outline: none;
+    padding: 20px 20px;
+    text-transform: uppercase;
+    transition: all .35s ease;
+    width: 60%;
+  }

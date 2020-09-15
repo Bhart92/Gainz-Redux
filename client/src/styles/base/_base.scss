@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 66%;
+    font-family: $font-lato;
+    position: relative;
+  }
+  ::-webkit-scrollbar {
+    background: transparent;  /* Optional: just make scrollbar invisible */
+    width: 0px;  /* Remove scrollbar space */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: $white;
+}
+
+body{
+    color: $black;
+    background-color: $black;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: $m-size;
+    line-height: 1.6;
+}
+div{
+  color: $white!important;
+}
+h1{
+  margin: 0;
+  position: relative!important;
+  color: $white;
+}
+a{
+    color: $white;
+    font-weight: 300;
+    margin: -10px;
+    padding: 10px;
+    text-decoration: none;
+    transition: .25s all ease-in-out;
+    &:hover{
+      color: $orange;
+    }
+  }
+
+  ul li{
+    list-style-type: none;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  .container{
+    align-items: center;
+    background: $grey;
+    box-shadow: 1px 0px 5px $orange, -1px 0px 5px $orange;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 700px;
+    &:first-of-type{
+      margin: 100px auto 75px auto;
+    }
+  }
+  .active{
+    opacity: 1!important;
+    transform: translate(0, 0)!important;
+}
+.fa-youtube{
+  color: lighten(red, 10%);
+  font-size: 2rem;
+  left: 2px;
+  outline: $black;
+  position: relative;
+  top: 2.5px;
+}
+.iconDiv{
+  color: $grey;
+  font-size: .95rem;
+  height: 15px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  a{
+    color: $grey;
+  }
+}
+img{
+  position: relative;
+  top: 0px;
+  left: 1px;
+  height: 50px;
+  width: 50px;
+}

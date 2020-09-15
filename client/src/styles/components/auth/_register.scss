@@ -1,0 +1,138 @@
+.auth--container{
+    min-width: 100%;
+}
+.register--container{
+    @extend .post--container;
+    height: auto;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: space-evenly;
+    color: $white;
+    text-align: center;
+    min-width: 100%;
+    h1{
+        margin: 55px 0;
+    }
+}
+.register--input-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    input{
+        margin: 25px 5px;
+        outline: none;
+        background: transparent;
+        border: none;
+        border-bottom: 1.5px solid $orange;
+        color: $white;
+        opacity: .5;
+        width: 250px;
+        text-align: center;
+        padding-bottom: 5px;
+    }
+
+}
+.register--input-box__small{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    small{
+        margin: 20px 0;
+    }
+}
+.register--footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    small{
+        color: #868686;
+        font-size: .9rem;
+    }
+}
+.my-1{
+    display: flex;
+    flex-direction: column;
+    a{
+        margin: 5px 0;
+    }
+}
+
+@media only screen and (max-width: 1450px){
+    .register--container{
+        display: flex;
+        height: auto;
+        width: 90%;
+        margin: 0 auto;
+        flex-direction: column;
+        text-align: center;
+        border-right: 0.5px solid lighten($orange, 20%);
+        border-left: 0.5px solid lighten($orange, 20%);
+        overflow-y: scroll;
+    }
+}
+@media only screen and (width: 1024px) and (height: 1366px){
+    .post--container.register--container{
+        height: 100vh!important;
+    }
+    .register--input-box__small input[type='submit'], .register--input-box__small .create-button {
+        padding: 10px 20px;
+    }
+    .register--input-box input {
+        font-size: 1.2rem;
+    }
+    .register--input-box__small input[type='submit']{
+        padding: 15px 25px;
+        font-size: 1.15rem;
+    }
+    .register--footer{
+        small, p{
+            font-size: 1rem;
+        }
+    }
+
+}
+@media only screen and (max-width: 800px){
+    .register--container {
+        width: 95%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@media only screen and (max-width: 700px){
+    .register--container {
+        position: unset;
+        top: unset;
+        left: unset;
+        transform: unset;
+        height: 105vh;
+        margin-top: 16em;
+    }
+    .register--input-box {
+        flex-direction: column;
+    } 
+    .register--container .form textarea {
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 375px){
+    .register--container {
+        margin-bottom: 2rem;
+    }
+}
+@media only screen and (max-width: 325px){
+    .register--container {
+        height: auto;
+    }
+    .register--container .comment-item--info p, .register--container .comment-item--info p {
+        font-size: .95rem;
+    }
+     .register--container .comment-item--userTitle h4, .register--container .comment-item--userTitle h4 {
+        font-size: 1.05rem;
+    }
+}
