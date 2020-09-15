@@ -1,4 +1,4 @@
-import { SAVE_TEMP_WORKOUTS, SAVE_WORKOUTS, CLEAR_WORKOUTS } from './types';
+import { SAVE_TEMP_WORKOUTS, SAVE_WORKOUTS, RESET_TEMP_WORKOUTS } from './types';
 import { setAlert } from './alert';
 
 
@@ -16,9 +16,8 @@ export const saveWorkouts = (workouts) => dispatch => {
     })
     dispatch(setAlert('Workouts Saved', 'success'))};
 
-export const ClearWorkouts = (workouts) => dispatch => {
+export const resetWorkouts = (workouts) => dispatch => {
     dispatch({
-        type: CLEAR_WORKOUTS,
-        payload: []
+        type: RESET_TEMP_WORKOUTS
     })
 };

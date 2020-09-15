@@ -53,7 +53,8 @@ a{
   .container{
     align-items: center;
     background: $grey;
-    box-shadow: 1px 0px 5px $orange, -1px 0px 5px $orange;
+    -webkit-box-shadow: 0 0 5px -.5px #D65A31;
+    box-shadow: 0 0 5px -.5px #D65A31;
     display: flex;
     height: auto;
     flex-direction: column;

@@ -1,8 +1,10 @@
 .alert-success{
-    background: $black;
-    color: $orange;
-    font-size: 1.2rem;
+    background: $grey;
+    color: $orange!important;
+    font-size: 2.5rem;
     font-weight: 600;
+    box-shadow: 0 2px 5px -2px #D65A31;
+    display: flex;
     letter-spacing: 1.05px;
     text-transform: uppercase;
     text-align: center;
@@ -12,7 +14,7 @@
     left: 0;
     // transform: translate(-50%, -50%);
     z-index: 1002;
-    height: 100px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -2,12 +2,12 @@ import React, {useEffect, useState} from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import {saveWorkouts} from '../../actions/workouts';
+import {saveWorkouts, resetWorkouts} from '../../actions/workouts';
 import SaveButton from '../layout/SaveButton';
 import uuid from 'uuid';
 
 
-const RandomDisplay = ({ workouts: {tempWorkouts}, saveWorkouts }) => {
+const RandomDisplay = ({ workouts: {tempWorkouts}, saveWorkouts, resetWorkouts }) => {
     const workoutArr = Object.values(tempWorkouts);
     // eslint-disable-next-line no-use-before-define
     useEffect(() => {
@@ -31,8 +31,7 @@ const RandomDisplay = ({ workouts: {tempWorkouts}, saveWorkouts }) => {
         saveWorkouts(array)
     }
     const resetForm = () => {
-        // setSavedWorkouts({});
-        // setCurrentWorkouts({});
+        resetWorkouts();
      };
 
     return(
@@ -69,4 +68,4 @@ const mapStateToProps = state => ({
     workouts: state.workouts
 });
 
-export default connect(mapStateToProps, {saveWorkouts})(RandomDisplay);
+export default connect(mapStateToProps, {saveWorkouts, resetWorkouts})(RandomDisplay);

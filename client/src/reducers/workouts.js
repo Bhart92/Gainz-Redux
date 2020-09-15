@@ -1,4 +1,4 @@
-import { SAVE_TEMP_WORKOUTS, SAVE_WORKOUTS, CLEAR_WORKOUTS } from '../actions/types';
+import { SAVE_TEMP_WORKOUTS, SAVE_WORKOUTS, RESET_TEMP_WORKOUTS } from '../actions/types';
 
 
 const initialState = {
@@ -23,10 +23,11 @@ export default function(state = initialState, action, previousState) {
                     tempWorkouts: [],
                      savedWorkouts: [...state.savedWorkouts, ...payload]
                 };  
-        case CLEAR_WORKOUTS:
+        case RESET_TEMP_WORKOUTS:
             return {
                 ...state,
-                };       
+                tempWorkouts: [],
+            };       
             default:
                 return state;
             }

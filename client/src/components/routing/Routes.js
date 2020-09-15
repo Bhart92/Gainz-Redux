@@ -5,6 +5,7 @@ import Alert from '../layout/Alert';
 import NotFound from '../layout/NotFound';
 import Header from '../layout/Header';
 import Dashboard from '../dashboard/Dashboard';
+import Profile from '../profile/Profile';
 
 
 import PrivateRoute from '../routing/PrivateRoute';
@@ -21,6 +22,7 @@ const Routes = ({isAuthenticated}) => {
           <Route exact path='/register' component={Register} />
           <Route exact path='/login' component={Login} />
           <PrivateRoute exact path='/dashboard' component={Dashboard} />
+          <Route exact path='/profile' component={Profile} />
           <Route component={NotFound} />
         </Switch>
       </section>

@@ -25,7 +25,7 @@ const Header = ({ isAuthenticated, logout }) => {
                     Logout
                 </li>
                 <li>
-                    <Link to='/'>My Workouts</Link>
+                    <Link to='/profile'>My Workouts</Link>
                 </li>
                 </ul>
           </div>
