@@ -1,0 +1,36 @@
+.help{
+    height: 100vh;
+    width: 80%;
+    .help--list-container{
+        border: 1px dashed $orange;
+        display: flex;
+        width: 100%;
+        ol{
+            color: $white;
+            list-style-type: upper-roman;
+            width: 100%;
+            li{
+               border-bottom: .5px dashed $orange;
+               margin: 0 auto;
+               padding: 25px 0;
+              width: 80%;
+              &:last-of-type{
+                border-bottom: unset
+              }
+            }
+        }
+    }
+}
+// .container .help{
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: column;
+// }
+.help--h1{
+    margin: 50px 0 25px 0;
+}
+.container .help{
+    height: auto;
+    padding-bottom: 50px;
+}

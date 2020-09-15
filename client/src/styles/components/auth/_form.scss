@@ -1,0 +1,30 @@
+.generate--form-container{
+    align-items: center;
+    background:$grey;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  .generate--form{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .generate--form-select{
+    background: transparent;
+    border: none;
+    color: $white;
+    height: 65px;
+    margin: 5rem 0;
+    width: 75%;
+    &:focus{
+     background: transparent;
+     border: none;
+     color: $black;
+     outline: none;
+    }
+  }

@@ -16,7 +16,12 @@
       justify-content: space-around;
       flex-direction: row-reverse;
       li{
-        margin: 20px;
+        margin: 0 25px;
+        transition: all .35s ease;
+        &:hover{
+          cursor: pointer;
+          color: $orange;
+        }
       }
     }
   }

@@ -1,0 +1,69 @@
+.saved--container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.saved--title{
+    margin-top: 25px;
+}
+.saved--workout-wrapper{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 25px;
+    width: 75%;
+
+}
+.saved--workout-wrapper{
+    p{
+        color: $white;
+    }
+}
+.saved--workout-details{
+    flex-basis: 50%;
+    opacity: 0;
+    transform: translate(0, 500%);
+    transition: all .35s ease;
+
+}
+.saved--workout-details + a{
+    overflow: hidden;
+    text-align: right;
+}
+hr{
+    background: $black;
+    border: .5px dashed $orange;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: .25px;
+    left: 50%;
+    outline: $black;
+    position: absolute;
+    transform: translate(-50%, 0);
+    width: 75%;
+    
+}
+
+.saved--title-container{
+    align-items: center;
+    display: flex;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    position: relative;
+    width: 100%;
+}
+.saved--title{
+    flex-basis: 50%;
+    text-align: center;
+}
+.saved--title h2{
+    color: $white;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0 0 25px 0;
+}

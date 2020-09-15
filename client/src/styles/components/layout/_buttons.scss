@@ -36,6 +36,11 @@
      border: 2px solid $blue;
      color: $blue;
       }
+      &:disabled{
+        background: grey;
+        border: 2px solid grey;
+        color: $blue;
+      }
   }
   .button__save{
     background: $green;

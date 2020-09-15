@@ -21,16 +21,12 @@ const Header = ({ isAuthenticated, logout }) => {
         <div><h1 className='header--h1'><Link to='dashboard'><i class="fas fa-dumbbell"></i><i class="fas fa-dumbbell"></i>Gainz</Link></h1></div>
         <div>
             <ul>
-                <li>
-                    <NavLink exact={true} to='help'>Help</NavLink>
-                    <li onClick={e => logout()}>Logout</li>
+                <li onClick={e => logout()}>
+                    Logout
                 </li>
-                {/* {headerArray.length > 0 ? (                
-                                        <li>
-                                            <NavLink exact={true} to='saved'>Saved Workouts</NavLink>
-                                        </li>) : 
-                                        <li></li>} */}
-
+                <li>
+                    <Link to='/'>My Workouts</Link>
+                </li>
                 </ul>
           </div>
     </header>

@@ -5,8 +5,9 @@ import workoutReducer from '../../reducers/workoutReducer';
 import {saveWorkouts} from '../../actions/workouts';
 
 //added
-  const Form = ({saveWorkouts}) => {
-    const workouts = useContext(WorkoutContext);
+  const Form = ({saveWorkouts, workouts}) => {
+    const workoutArr = Object.values(workouts);
+    const worksoutContext = useContext(WorkoutContext);
     const [state, setState] = useState({
         value: 'chest'
     });
@@ -18,7 +19,7 @@ import {saveWorkouts} from '../../actions/workouts';
      };
      const onSubmit = (e) => {
         e.preventDefault();
-        const workoutArray = workoutReducer(state, workouts);
+        const workoutArray = workoutReducer(state, worksoutContext);
         saveWorkouts(workoutArray)
      };
                 return (
@@ -38,7 +39,7 @@ import {saveWorkouts} from '../../actions/workouts';
                                 <option value='cardio'>Cardio</option>
                                 <option value='kettlebells'>Kettlebells</option>
                             </select>
-                            <button className='button button__generate' type='submit' >Generate Workouts</button>
+                            <button className='button button__generate' type='submit' disabled={workoutArr.length === 3}>Generate Workouts</button>
                             
                         </form>
                 </div>
