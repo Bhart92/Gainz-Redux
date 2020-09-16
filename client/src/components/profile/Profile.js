@@ -2,26 +2,20 @@ import React, {useContext, useEffect} from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import SavedWorkouts from './SavedWorkouts';
+import { clearSavedWorkouts } from '../../actions/workouts';
 
 // import SavedWorkoutsContext from '../context/savedWorkoutsContext';
 // import SavedStatusContext from '../context/savedStatusContext';
 // import SavedWorkout from './SavedWorkout';
 
 
-const SavedWorkoutDisplay = ({savedWorkouts, isAuthenticated, user}) => {
+const SavedWorkoutDisplay = ({savedWorkouts, isAuthenticated, clearSavedWorkouts}) => {
 	if(!isAuthenticated){
 		return <Redirect to='/' />;
 	}
-	const handleSave = () => {
-        // if(savedworkout.length > 1){
-        //     const localWorkouts = JSON.stringify(savedWorkouts);
-		// 	localStorage.setItem('workouts', localWorkouts);
-		// 	setSubmit({status: 'Workout List Saved!'})
-        // }
-	};
+
 	const handleReset = () => {
-		localStorage.clear();
-		// setSavedWorkouts({});
+		clearSavedWorkouts();
 	}
 
 	return(
@@ -35,8 +29,6 @@ const SavedWorkoutDisplay = ({savedWorkouts, isAuthenticated, user}) => {
 				</div>
 				<SavedWorkouts savedWorkouts={savedWorkouts}/>
 				<div className='button--container'>
-					<button className='button button__save' onClick={handleSave} >
-					Save List</button>
 					<button className='button button__reset' onClick={handleReset}>Reset</button>
 				</div>
 				</div>
@@ -49,4 +41,4 @@ const mapStateToProp = state => ({
 	user: state.auth.user,
 	savedWorkouts: state.workouts.savedWorkouts
 });
-export default connect(mapStateToProp)(SavedWorkoutDisplay);
+export default connect(mapStateToProp, {clearSavedWorkouts})(SavedWorkoutDisplay);

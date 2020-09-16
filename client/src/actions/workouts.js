@@ -22,8 +22,7 @@ export const saveWorkouts = ( workouts ) => async (dispatch) => {
 
     try {
       const res = await axios.post('api/workouts', body, config);
-      console.log('fired')
-
+      console.log(res.data)
       dispatch({
         type: SAVE_WORKOUTS,
         payload: res.data
@@ -38,6 +37,16 @@ export const saveWorkouts = ( workouts ) => async (dispatch) => {
     }
   
   }
+
+//Clear Saved WorkoutList
+export const clearSavedWorkouts = () => async (dispatch) => {
+
+  try {
+    
+  } catch (error) {
+    
+  }
+}
 
 export const resetWorkouts = (workouts) => dispatch => {
     dispatch({
