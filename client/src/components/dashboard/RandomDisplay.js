@@ -23,7 +23,7 @@ const RandomDisplay = ({ workouts: {tempWorkouts}, saveWorkouts, resetWorkouts }
 	})
     const res = {};
     let array = [];
-    const handleSubmit = (tempWorkouts) => {
+    const handleSubmit = (array) => {
         array.forEach(obj => {
             res[obj.name] = obj.name;
             res[obj.url] = obj.url;
@@ -55,7 +55,7 @@ const RandomDisplay = ({ workouts: {tempWorkouts}, saveWorkouts, resetWorkouts }
         {/* <span>{submit.status}</span> */}
         {workoutArr.length !== 0 && <p className='random-workout__placeholder'>Add to workout list to generate more</p>}
 
-            <button className=' button button__save' onClick={e => handleSubmit(tempWorkouts)} >Add To Workout List</button>
+            <button className=' button button__save' onClick={e => handleSubmit(array)} >Add To Workout List</button>
         <button className='button button__reset' onClick={resetForm}>Reset</button>
     </div>
     <NavLink exact={true} to='help'>Help</NavLink>

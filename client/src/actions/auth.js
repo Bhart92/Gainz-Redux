@@ -8,7 +8,8 @@ import {
     LOGIN_FAIL,
     LOGIN_SUCCESS,
     LOGOUT,
-    CLEAR_PROFILE
+    CLEAR_PROFILE,
+    SAVE_WORKOUTS
 } from '../actions/types';
 import setAuthToken from '../utils/setAuthToken';
 
@@ -69,6 +70,7 @@ console.log('failed')
 export const redirect = redirectUrl => {
     window.location = redirectUrl;
   };
+
 
 //Register User
 export const register = ({ username, email, password }) => async (dispatch) => {
