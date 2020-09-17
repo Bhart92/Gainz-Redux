@@ -27,6 +27,12 @@
       border: 2px solid $orange;
       color: $orange;
      }
+     &:disabled{
+      background: transparent;
+      border: 2px solid $orange;
+      color: $orange;
+      cursor: default;
+    }
   }
   .button__generate{
     background: $blue;
@@ -50,6 +56,12 @@
      background: transparent;
      border: 2px solid $green;
      color: $green;
+    }
+    &:disabled{
+      background: transparent;
+      border: 2px solid $green;
+      color: $green;
+      cursor: default;
     }
   }
   .button__save__individual-workout{

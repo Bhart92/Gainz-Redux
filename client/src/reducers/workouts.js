@@ -1,9 +1,10 @@
-import { SAVE_TEMP_WORKOUTS, SAVE_WORKOUTS, RESET_TEMP_WORKOUTS } from '../actions/types';
+import { SAVE_TEMP_WORKOUTS, SAVE_WORKOUTS, RESET_TEMP_WORKOUTS, CLEAR_SAVED_WORKOUT_LIST } from '../actions/types';
 
 
 const initialState = {
     tempWorkouts: [],
-    savedWorkouts: []
+    savedWorkouts: [],
+    user: null
 };
 
 
@@ -26,9 +27,14 @@ export default function(state = initialState, action, previousState) {
         case RESET_TEMP_WORKOUTS:
             return {
                 ...state,
-                tempWorkouts: [],
-            };       
+                tempWorkouts: []
+            };
+        case CLEAR_SAVED_WORKOUT_LIST:
+            return {
+                ...state,
+                savedWorkouts: new Array()
+                };           
             default:
                 return state;
-            }
+            };
         }

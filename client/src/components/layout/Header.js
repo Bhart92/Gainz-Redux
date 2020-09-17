@@ -6,7 +6,7 @@ import { logout } from '../../actions/auth';
 // import SavedWorkoutsContext from '../context/savedWorkoutsContext';
 
 
-const Header = ({ isAuthenticated, logout }) => {
+const Header = ({ isAuthenticated, logout, savedWorkouts }) => {
     // const {savedWorkouts} = useContext(SavedWorkoutsContext);
     const headerItems = localStorage.getItem('workouts');
     let headerArray;
@@ -18,11 +18,14 @@ const Header = ({ isAuthenticated, logout }) => {
 
     return(
     <header className='header'>
-        <div><h1 className='header--h1'><Link to='dashboard'><i class="fas fa-dumbbell"></i><i class="fas fa-dumbbell"></i>Gainz</Link></h1></div>
+        <div><h1 className='header--h1'><Link to='dashboard'>Gainz</Link></h1></div>
         <div>
             <ul>
                 <li onClick={e => logout()}>
                     Logout
+                </li>
+                <li>
+                <NavLink exact={true} to='help'>Help</NavLink>
                 </li>
                 <li>
                     <Link to='/profile'>My Workouts</Link>
@@ -36,11 +39,13 @@ const Header = ({ isAuthenticated, logout }) => {
 Header.propTypes = {
     auth: PropTypes.object.isRequired,
     logout: PropTypes.func.isRequired,
-    user: PropTypes.object.isRequired
+    user: PropTypes.object.isRequired,
+    savedWorkouts: PropTypes.array.isRequired
 };
 
 const mapStateToProps = state => ({
     user: state.user,
-    isAuthenticated: state.auth.isAuthenticated
+    isAuthenticated: state.auth.isAuthenticated,
+    savedWorkouts: state.workouts.savedWorkouts
 });
 export default connect(mapStateToProps, { logout })(Header);

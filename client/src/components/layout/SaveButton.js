@@ -3,12 +3,12 @@ import React from 'react';
 
 class SaveButton extends React.Component{
     state = {
-        status: 'Save',
+        status: 'Add',
         disabled: false
     }
     handleonSave = () => {
         this.setState({
-            status: 'Saved',
+            status: 'Added',
             disabled: true
         })
     }

@@ -39,7 +39,7 @@ import {saveTempWorkouts} from '../../actions/workouts';
                                 <option value='cardio'>Cardio</option>
                                 <option value='kettlebells'>Kettlebells</option>
                             </select>
-                            <button className='button button__generate' type='submit' disabled={workoutArr.length === 3}>Generate Workouts</button>
+                            <button className='button button__generate' type='submit'>Generate Workouts</button>
                             
                         </form>
                 </div>

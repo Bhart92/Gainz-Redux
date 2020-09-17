@@ -8,6 +8,7 @@ import uuid from 'uuid';
 
 
 const RandomDisplay = ({ workouts: {tempWorkouts}, saveWorkouts, resetWorkouts }) => {
+    console.log(Object.keys(tempWorkouts).length>0)
     const workoutArr = Object.values(tempWorkouts);
     // eslint-disable-next-line no-use-before-define
     useEffect(() => {
@@ -53,12 +54,10 @@ const RandomDisplay = ({ workouts: {tempWorkouts}, saveWorkouts, resetWorkouts }
         </div>
     <div className='button--container'>
         {/* <span>{submit.status}</span> */}
-        {workoutArr.length !== 0 && <p className='random-workout__placeholder'>Add to workout list to generate more</p>}
 
-            <button className=' button button__save' onClick={e => handleSubmit(array)} >Add To Workout List</button>
-        <button className='button button__reset' onClick={resetForm}>Reset</button>
+            <button className=' button button__save' onClick={e => handleSubmit(array) } disabled={!Object.keys(tempWorkouts).length > 0} >Save Workouts</button>
+        <button className='button button__reset' onClick={resetForm} disabled={!Object.keys(tempWorkouts).length > 0}>Reset</button>
     </div>
-    <NavLink exact={true} to='help'>Help</NavLink>
 
 	</div>
     )
