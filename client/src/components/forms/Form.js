@@ -2,16 +2,18 @@ import React, { useContext, useState} from 'react';
 import { connect } from 'react-redux';
 import WorkoutContext from '../../context/workoutContext';
 import workoutReducer from '../../reducers/workoutReducer';
-import {saveTempWorkouts} from '../../actions/workouts';
+import {saveTempWorkouts, resetWorkouts} from '../../actions/workouts';
 
 //added
-  const Form = ({saveTempWorkouts, workouts}) => {
+  const Form = ({saveTempWorkouts, resetWorkouts, workouts, workouts: {tempWorkouts}}) => {
     const workoutArr = Object.values(workouts);
+    console.log(tempWorkouts)
     const worksoutContext = useContext(WorkoutContext);
     const [state, setState] = useState({
         value: 'chest'
     });
     const inputValue = (e) => {
+        resetWorkouts();
          const value = e.target.value; 
          setState(() => ({
              value
@@ -39,7 +41,7 @@ import {saveTempWorkouts} from '../../actions/workouts';
                                 <option value='cardio'>Cardio</option>
                                 <option value='kettlebells'>Kettlebells</option>
                             </select>
-                            <button className='button button__generate' type='submit'>Generate Workouts</button>
+                            <button className='button button__generate' type='submit' disabled={Object.keys(tempWorkouts).length > 0}>Generate Workouts</button>
                             
                         </form>
                 </div>
@@ -52,5 +54,5 @@ import {saveTempWorkouts} from '../../actions/workouts';
 const mapStateToProps = state => ({
     workouts: state.workouts
   });
-        export default connect(mapStateToProps, { saveTempWorkouts })(Form);
+        export default connect(mapStateToProps, { resetWorkouts, saveTempWorkouts })(Form);
     

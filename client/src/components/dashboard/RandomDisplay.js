@@ -8,7 +8,6 @@ import uuid from 'uuid';
 
 
 const RandomDisplay = ({ workouts: {tempWorkouts}, saveWorkouts, resetWorkouts }) => {
-    console.log(Object.keys(tempWorkouts).length>0)
     const workoutArr = Object.values(tempWorkouts);
     // eslint-disable-next-line no-use-before-define
     useEffect(() => {
@@ -46,7 +45,7 @@ const RandomDisplay = ({ workouts: {tempWorkouts}, saveWorkouts, resetWorkouts }
                             onClick={() => {
                     array.push(workout);
                 }} key={uuid()}>
-                <p >{workout.name}</p>
+                <p><img src={workout.icon} alt={workout.value}/> {workout.name}</p>
                 <SaveButton />
                 </div>)
         })

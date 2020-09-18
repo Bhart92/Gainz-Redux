@@ -22,15 +22,30 @@
         color: $white;
     }
 }
+.saved--workout--wrapper-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+}
 .saved--workout-details{
     flex-basis: 50%;
     opacity: 1;
     transition: all .35s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    img{
+        height: 30px;
+        width: 30px;
+        margin-right: 10px; 
+    }
 
 }
 .saved--workout-details + a{
     overflow: hidden;
-    text-align: right;
+    text-align: center;
 }
 hr{
     background: $black;

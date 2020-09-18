@@ -13,7 +13,6 @@ const SavedWorkoutDisplay = ({user, savedWorkouts, isAuthenticated, clearSavedWo
 	}, [loadUser])
 const [workoutState, setWorkoutState] = useState(false);
 
-console.log(savedWorkouts.length)
 	const handleReset = async () => {
 		 setWorkoutState(!workoutState);
 		 clearSavedWorkouts();

@@ -76,15 +76,16 @@ a{
   top: 2.5px;
 }
 .iconDiv{
-  color: $grey;
-  font-size: .95rem;
-  height: 15px;
-  position: absolute;
-  bottom: 0;
+  color: #393E46;
+  font-size: .96rem;
+  font-weight: 300;
+  height: auto;
   text-align: center;
-  width: 100%;
+  width: 50%;
+  word-break: break-word;
+  margin: 0 auto;
   a{
-    color: $grey;
+    color: $white;
   }
 }
 img{
@@ -93,4 +94,7 @@ img{
   left: 1px;
   height: 50px;
   width: 50px;
+}
+h1{
+  font-size: 3rem;
 }

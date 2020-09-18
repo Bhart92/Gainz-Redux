@@ -13,7 +13,8 @@
     border-top: 2px dashed rgba(214, 90, 49, .85);
     border-bottom: 2px dashed rgba(214, 90, 49, .85);
     display: flex;
-    height: 210px;
+    min-height: 210px;
+    height: auto;
     flex-direction: column;
     justify-content: center;
     margin: 60px;
@@ -30,5 +31,12 @@
     transform: translate(0, 500%);
     transition: transform .35s ease, opacity .25s ease;
     width: 75%;
+    p{
+        display: flex;
+        align-items: center;
+        img{
+            height: 30px;
+        }
+    }
 }
 

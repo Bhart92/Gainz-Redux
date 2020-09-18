@@ -43,9 +43,10 @@
      color: $blue;
       }
       &:disabled{
-        background: grey;
-        border: 2px solid grey;
+        background: transparent;
+        border: 2px solid $blue;
         color: $blue;
+        cursor: default;
       }
   }
   .button__save{
