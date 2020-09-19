@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
   }
+  #root{
+    position: relative;
+  }
   
   html {
     font-size: 66%;
@@ -61,7 +64,7 @@ a{
     flex-direction: column;
     margin: 0 auto;
     width: 700px;
-    margin-bottom: 5rem;
+    min-height: 300px;
   }
   .active{
     opacity: 1!important;
@@ -83,7 +86,7 @@ a{
   text-align: center;
   width: 50%;
   word-break: break-word;
-  margin: 0 auto;
+  margin: 5rem auto;
   a{
     color: $white;
   }

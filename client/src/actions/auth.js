@@ -9,7 +9,7 @@ import {
     LOGIN_SUCCESS,
     LOGOUT,
     CLEAR_PROFILE,
-    SAVE_WORKOUTS
+    ACCOUNT_DELETED
 } from '../actions/types';
 import setAuthToken from '../utils/setAuthToken';
 
@@ -113,5 +113,23 @@ export const logout = () => dispatch => {
   dispatch({type: CLEAR_PROFILE});
   dispatch({type: LOGOUT});
 }
+
+// Delete account & profile
+export const deleteAccount = () => async dispatch => {
+  if (window.confirm('Are you sure? This can NOT be undone!')) {
+    try {
+      await axios.delete('/api/auth');
+
+      dispatch({ type: AUTH_ERROR });
+      dispatch({ type: ACCOUNT_DELETED });
+
+    } catch (err) {
+      dispatch({
+        type: AUTH_ERROR,
+        payload: { msg: err.response.statusText, status: err.response.status }
+      });
+    }
+  }
+};
 
 

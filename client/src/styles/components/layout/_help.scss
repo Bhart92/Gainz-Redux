@@ -9,11 +9,19 @@
             color: $white;
             list-style-type: upper-roman;
             width: 100%;
+            padding: 0!important;
             li{
                border-bottom: .5px dashed $orange;
                margin: 0 auto;
                padding: 25px 0;
               width: 80%;
+              text-align: justify;
+              &:nth-of-type(3){
+                  width: 85%;
+                  word-break: break-word;
+                  text-align: justify;
+                  list-style-type: none;
+              }
               &:last-of-type{
                 border-bottom: unset
               }

@@ -6,6 +6,10 @@ import NotFound from '../layout/NotFound';
 import Header from '../layout/Header';
 import Dashboard from '../dashboard/Dashboard';
 import Profile from '../profile/Profile';
+import HelpPage from '../layout/HelpPage';
+import Settings from '../auth/Settings';
+
+
 
 
 import PrivateRoute from '../routing/PrivateRoute';
@@ -16,6 +20,7 @@ const Routes = ({isAuthenticated}) => {
   return (
     <Fragment>
       {isAuthenticated ? <Header /> : ''}
+      {isAuthenticated ? <Settings /> : ''}
       <section className='container register'>
         <Alert />
         <Switch>
@@ -23,6 +28,7 @@ const Routes = ({isAuthenticated}) => {
           <Route exact path='/login' component={Login} />
           <PrivateRoute exact path='/dashboard' component={Dashboard} />
           <Route exact path='/profile' component={Profile} />
+          <Route exact path='/help' component={HelpPage} />
           <Route component={NotFound} />
         </Switch>
       </section>
