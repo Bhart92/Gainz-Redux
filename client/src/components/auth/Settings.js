@@ -24,13 +24,11 @@ const Settings = ({ logout, isAuthenticated, deleteAccount }) => {
     function openModal() {
           setIsOpen(true);
           document.querySelector('.fa-cog').classList.toggle('cog-active')
-          document.querySelector('.fa-cog').classList.toggle('animate__pulse')
 
     }
     function closeModal(){
             setIsOpen(false);
             document.querySelector('.fa-cog').classList.toggle('cog-active')
-            document.querySelector('.fa-cog').classList.toggle('animate__pulse')
     }
     return (
         <Fragment>

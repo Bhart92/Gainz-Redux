@@ -15,7 +15,7 @@ const Landing = ({isAuthenticated}) => {
                     <h1><img src='../images/bench.svg' alt='bench press'/>Gainz</h1>
                     <span>Workout Randomizer</span>
                     <div className='landing--button--container'>
-                    <Link className='button__landing button__reset' to='/register'>Create an Account</Link>
+                    <Link className='button__landing button__reset' to='/register'>SignUp</Link>
                     <Link className='button__landing button__reset' to='/login'>Login</Link>
                     </div>
                 </div>

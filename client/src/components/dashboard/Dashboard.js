@@ -4,10 +4,7 @@ import { Redirect } from 'react-router-dom';
 import Form from '../forms/Form';
 import RandomDisplay from './RandomDisplay';
 
-const Dashboard = ({isAuthenticated}) => {
-    if(!isAuthenticated){
-        return <Redirect to='/' />;
-    }
+const Dashboard = (props) => {
     return(
         <Fragment>
         <section className='dashboard--container'>
@@ -19,9 +16,4 @@ const Dashboard = ({isAuthenticated}) => {
         )
     };
 
-const mapStateToProp = state => ({
-    isAuthenticated: state.auth.isAuthenticated
-});
-
-
-export default connect(mapStateToProp)(Dashboard);
+export default Dashboard;

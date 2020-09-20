@@ -7,7 +7,7 @@ import { clearSavedWorkouts } from '../../actions/workouts';
 import { loadUser } from '../../actions/auth';
 
 
-const SavedWorkoutDisplay = ({user, savedWorkouts, isAuthenticated, clearSavedWorkouts, loadUser}) => {
+const SavedWorkoutDisplay = ({user, savedWorkouts, clearSavedWorkouts, loadUser}) => {
 	useEffect(() => {
 		loadUser();
 	}, [loadUser])
@@ -17,7 +17,6 @@ const [workoutState, setWorkoutState] = useState(false);
 		 setWorkoutState(!workoutState);
 		 clearSavedWorkouts();
 	}
-
 	return user === null ? <Spinner /> :
 		<div className='container'>
 			<h1 className='saved--title'>Saved Workouts</h1>
@@ -36,7 +35,6 @@ const [workoutState, setWorkoutState] = useState(false);
 		</div>;
 };
 const mapStateToProp = state => ({
-	isAuthenticated: state.auth.isAuthenticated,
 	user: state.auth.user,
 	savedWorkouts: state.workouts.savedWorkouts
 });
