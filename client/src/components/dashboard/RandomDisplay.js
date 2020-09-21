@@ -1,7 +1,5 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
 import {saveWorkouts, resetWorkouts} from '../../actions/workouts';
 import SaveButton from '../layout/SaveButton';
 import uuid from 'uuid';

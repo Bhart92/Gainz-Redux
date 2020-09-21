@@ -22,6 +22,7 @@
     background: $orange;
     border: 2px solid $orange;
     margin: .5px;
+    padding: 10px 5px;
     &:hover{
       background: transparent;
       border: 2px solid $orange;
@@ -105,9 +106,9 @@
     font-size: 2rem;
     font-weight: 500;
     letter-spacing: 5px;
-    margin: 15px auto;
+    margin: 0 10px;
     outline: none;
     text-transform: uppercase;
     transition: all .35s ease;
-    margin: 0 10px;
+    cursor: pointer;
   }

@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { NavLink, Link } from 'react-router-dom';
@@ -6,15 +6,6 @@ import { NavLink, Link } from 'react-router-dom';
 
 
 const Header = ({ isAuthenticated, logout, savedWorkouts }) => {
-    // const {savedWorkouts} = useContext(SavedWorkoutsContext);
-    const headerItems = localStorage.getItem('workouts');
-    let headerArray;
-    // if(headerItems != null){
-    //     headerArray = Object.entries(headerItems)
-    // } else{
-    //     headerArray = Object.entries(headerItems)
-    // }
-
     return(
     <header className='header'>
         <div><h1 className='header--h1'><Link to='dashboard'>Gainz</Link></h1></div>

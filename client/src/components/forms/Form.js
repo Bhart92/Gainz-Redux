@@ -6,7 +6,6 @@ import {saveTempWorkouts, resetWorkouts} from '../../actions/workouts';
 
 //added
   const Form = ({saveTempWorkouts, resetWorkouts, workouts, workouts: {tempWorkouts}}) => {
-    const workoutArr = Object.values(workouts);
     console.log(tempWorkouts)
     const worksoutContext = useContext(WorkoutContext);
     const [state, setState] = useState({

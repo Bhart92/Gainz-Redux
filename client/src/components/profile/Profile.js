@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
-import { Redirect } from 'react-router-dom';
 import SavedWorkouts from './SavedWorkouts';
 import { clearSavedWorkouts } from '../../actions/workouts';
 import { loadUser } from '../../actions/auth';

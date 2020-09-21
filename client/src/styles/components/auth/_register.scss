@@ -1,8 +1,16 @@
 .auth--container{
     min-width: 100%;
 }
+.container.register{
+    background: $black;
+    box-shadow: none!important;
+    height: 100vh;
+    justify-content: center;
+  }
 .register--container{
     @extend .post--container;
+    background: #393E46;
+    box-shadow: 0 0 5px -0.5px #D65A31;
     height: auto;
     max-width: 1100px;
     display: flex;
@@ -39,6 +47,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column-reverse;
+    margin: 55px 0;
+    a{
+        margin: 5px 0;
+    }
     small{
         margin: 20px 0;
     }

@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
-import Proptypes from 'prop-types';
 
 
 const Landing = ({isAuthenticated}) => {

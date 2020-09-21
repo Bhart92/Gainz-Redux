@@ -1,6 +1,5 @@
-import { SAVE_TEMP_WORKOUTS, USER_LOADED, SAVE_WORKOUTS, RESET_TEMP_WORKOUTS, CLEAR_SAVED_WORKOUT_LIST } from './types';
+import { SAVE_TEMP_WORKOUTS, SAVE_WORKOUTS, RESET_TEMP_WORKOUTS, CLEAR_SAVED_WORKOUT_LIST } from './types';
 import axios from 'axios';
-import setAuthToken from '../utils/setAuthToken';
 import { setAlert } from './alert';
 import { loadUser } from './auth';
 

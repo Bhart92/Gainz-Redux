@@ -21,7 +21,6 @@ const Routes = ({isAuthenticated}) => {
     <Fragment>
       {isAuthenticated ? <Header /> : ''}
       {isAuthenticated ? <Settings /> : ''}
-      <section className='container register'>
         <Alert />
         <Switch>
           <Route exact path='/register' component={Register} />
@@ -31,7 +30,6 @@ const Routes = ({isAuthenticated}) => {
           <PrivateRoute exact path='/help' component={HelpPage} />
           <Route component={NotFound} />
         </Switch>
-      </section>
     </Fragment>
 
   );

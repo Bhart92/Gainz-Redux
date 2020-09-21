@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import {Link, Redirect} from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setAlert } from '../../actions/alert';
@@ -7,27 +7,25 @@ import PropTypes from 'prop-types';
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
     const [formData, setFormData] = useState({
-        username: '',
         email: '',
         password: '',
         password2: ''
     });
 
     const {
-        username,
         email,
         password,
         password2
     } = formData;
 
-    const onChange = e => setFormData({ ... formData, [e.target.name]: e.target.value })
+    const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value })
 
     const onSubmit = async e => {
         e.preventDefault();
         if(password !== password2){
             setAlert('passwords dont match');
         } else{
-            register({ username, email, password });
+            register({ email, password });
         }
     };
     //Redirect if logged in
@@ -35,7 +33,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
         return <Redirect to="/dashboard" />
     }
     return (
-    <Fragment>
+    <div className='container register'>
         <div className='auth--container'>
             <div className='post--container register--container'>
                 <h1>Sign Up</h1>
@@ -43,13 +41,6 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                 <div>
                     <form onSubmit={e => onSubmit(e)}>
                         <div className='register--input-box'>
-                            <input
-                                type="text"
-                                placeholder="Username"
-                                name="username"
-                                value={username}
-                                onChange={e => onChange(e)}
-                            />
                         <input
                             type="email"
                             placeholder="Email Address"
@@ -82,7 +73,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                 </div>
             </div>
         </div>
-    </Fragment>
+    </div>
     );
 };
 

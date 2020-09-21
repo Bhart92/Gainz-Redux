@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -12,7 +12,7 @@ const Login = ({ login, isAuthenticated }) => {
 
     const { email, password } = formData;
 
-    const onChange = e => setFormData({... formData,[e.target.name]:e.target.value});
+    const onChange = e => setFormData({...formData,[e.target.name]:e.target.value});
     const onSubmit = async e => {
         e.preventDefault();
         login(email, password);
@@ -22,7 +22,7 @@ const Login = ({ login, isAuthenticated }) => {
         return <Redirect to='/dashboard' />;
     }
     return (
-        <Fragment>
+        <div className='container register'>
             <div className='auth--container'>
                 <div className='post--container register--container'>
                     <h1>Login</h1>
@@ -58,7 +58,7 @@ const Login = ({ login, isAuthenticated }) => {
                     </p>
                 </div>
             </div>
-        </Fragment>
+        </div>
 
     );
 };
