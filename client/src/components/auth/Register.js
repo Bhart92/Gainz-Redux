@@ -36,10 +36,10 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     return (
         <div className='container register'>
             <div className='auth--container'>
-                <div className='post--container register--container'>
+                <div className='register--container'>
                     <h1>Sign Up</h1>
                     <p><i className="fas fa-user"></i> Create Your Account</p>
-                    <div>
+                    <div className='register--form-container'>
                         <form onSubmit={e => onSubmit(e)}>
                             <div className='register--input-box'>
                                 <input
@@ -66,11 +66,13 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                                     onChange={e => onChange(e)}      
                                 />
                             </div>
-                            <div className='register--input-box__small'>
-                                <Link to='/'>Go Back</Link>
-                                <input className='button__landing button__reset' type='submit' value='Register' />
+                            <div className='login--input-box__small'>
+                                <input className='button__landing button__reset register' type='submit' value='Register' />
                             </div>
                         </form>
+                    </div>
+                    <div className='my-1'>
+                                <Link to='/'>Go Back</Link>
                     </div>
                 </div>
             </div>

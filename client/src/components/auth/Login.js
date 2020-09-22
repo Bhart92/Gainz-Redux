@@ -26,7 +26,7 @@ const Login = ({ login, isAuthenticated }) => {
     return (
         <div className='container register'>
             <div className='auth--container'>
-                <div className='post--container login--container'>
+                <div className='login--container'>
                     <h1><i class="fas fa-sign-in-alt"></i> Login</h1>
                     <div className='form--container'>
                         <form className='login--input-container' onSubmit={e => onSubmit(e)}>
