@@ -17,7 +17,8 @@ const Settings = ({ logout, isAuthenticated, deleteAccount }) => {
           borderRadius          : '10px',
           background            : '#393E46',
           border                : 'none',
-          boxShadow            : '0 0 5px -0.5px #66A182'
+          boxShadow             : '0 0 5px -0.5px #66A182',
+          outline               : 'none'
         }
     };
     const [modalIsOpen, setIsOpen] = useState(false);
