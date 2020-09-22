@@ -1,4 +1,5 @@
 import React, { useContext, useState} from 'react';
+import PropTypes from 'prop-types';
 import WorkoutContext from '../../context/workoutContext';
 import workoutReducer from '../../reducers/workoutReducer';
 import { connect } from 'react-redux';
@@ -42,7 +43,10 @@ import {saveTempWorkouts, resetWorkouts} from '../../actions/workouts';
         </div>
     );
 };
+Form.propTypes = {
+    workouts: PropTypes.array.isRequired
 
+};
 const mapStateToProps = state => ({
     workouts: state.workouts
   });

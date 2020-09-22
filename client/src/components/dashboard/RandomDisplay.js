@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import SaveButton from '../layout/SaveButton';
 import uuid from 'uuid';
 import { connect } from 'react-redux';
@@ -58,7 +59,9 @@ const RandomDisplay = ({ workouts: {tempWorkouts}, saveWorkouts, resetWorkouts }
 	    </div>
     )
 };
-
+RandomDisplay.propTypes = {
+    workouts: PropTypes.array.isRequired
+};
 const mapStateToProps = state => ({
     workouts: state.workouts
 });

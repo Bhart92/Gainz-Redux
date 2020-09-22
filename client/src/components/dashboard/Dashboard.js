@@ -2,7 +2,7 @@ import React from 'react';
 import Form from '../forms/Form';
 import RandomDisplay from './RandomDisplay';
 
-const Dashboard = (props) => {
+const Dashboard = () => {
     return(
         <section className='container'>
             <div className='dashboard--container'>
