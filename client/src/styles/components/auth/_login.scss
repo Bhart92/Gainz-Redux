@@ -54,6 +54,16 @@
         padding: 0 0 10px 10px;
     }
 }
+input:focus,
+input:valid {
+  border-bottom: 2px solid $orange;
+}
+input[type='submit']{
+    color: $white;
+}
+input:invalid {
+    outline: 0;
+}
 .login--container{
     background: #393E46;
     box-shadow: 0 0 5px -0.5px #66A182;

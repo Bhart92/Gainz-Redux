@@ -43,6 +43,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                         <form onSubmit={e => onSubmit(e)}>
                             <div className='register--input-box'>
                                 <input
+                                    required
                                     type="email"
                                     placeholder="Email Address"
                                     name="email"
@@ -52,6 +53,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                             </div>
                             <div className='register--input-box'>
                                 <input
+                                    required
                                     type="password"
                                     placeholder="Password"
                                     name="password"
@@ -59,6 +61,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                                     onChange={e => onChange(e)}
                                 />
                                 <input
+                                    required
                                     type="password"
                                     placeholder="Confirm Password"
                                     name="password2"
