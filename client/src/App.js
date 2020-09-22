@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import store from './store';
 import setAuthToken from './utils/setAuthToken';
 import './styles/styles.scss';
+import { HashRouter } from 'react-router-dom'
 import { Provider } from 'react-redux';
 import { loadUser } from './actions/auth';
 
@@ -21,14 +22,14 @@ const App = () => {
 
   return (
     <Provider store={store}>
-      <Router>
+      <HashRouter>
         <Fragment>
           <Switch>
             <Route exact path='/' component={Landing} />
             <Route component={Routes} />
           </Switch>
         </Fragment>
-      </Router>
+      </HashRouter>
     </Provider>
   );
 };
