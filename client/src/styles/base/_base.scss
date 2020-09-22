@@ -1,12 +1,13 @@
 * {
     box-sizing: border-box;
   }
+  
   #root{
     position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: auto;
   }
 
   html {
@@ -14,10 +15,12 @@
     font-family: $font-lato;
     position: relative;
   }
+
   ::-webkit-scrollbar {
     background: transparent;  /* Optional: just make scrollbar invisible */
     width: 0px;  /* Remove scrollbar space */
 }
+
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
     background: $white;
@@ -29,16 +32,20 @@ body{
     font-family: Helvetica, Arial, sans-serif;
     font-size: $m-size;
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: hidden!important;
+    transition: all .35s ease;
 }
+
 div{
   color: $white!important;
 }
+
 h1{
   margin: 0;
   position: relative!important;
   color: $white;
 }
+
 a{
     color: $white;
     font-weight: 300;
@@ -47,7 +54,7 @@ a{
     text-decoration: none;
     transition: .25s all ease-in-out;
     &:hover{
-      color: $orange;
+      color: $green;
     }
   }
 
@@ -58,11 +65,12 @@ a{
   button {
     cursor: pointer;
   }
+
   .container{
     align-items: center;
     background: $grey;
-    -webkit-box-shadow: 0 0 5px -.5px #D65A31;
-    box-shadow: 0 0 5px -.5px #D65A31;
+    -webkit-box-shadow: 0 0 5px -.5px green;
+    box-shadow: 0 0 5px -.5px green;
     display: flex;
     height: auto;
     flex-direction: column;
@@ -75,6 +83,7 @@ a{
     opacity: 1!important;
     transform: translate(0, 0)!important;
 }
+
 .fa-youtube{
   color: lighten(red, 10%);
   font-size: 2rem;
@@ -83,6 +92,7 @@ a{
   position: relative;
   top: 2.5px;
 }
+
 .iconDiv{
   color: #393E46;
   font-size: .96rem;
@@ -96,6 +106,7 @@ a{
     color: $white;
   }
 }
+
 img{
   position: relative;
   top: 0px;
@@ -103,6 +114,7 @@ img{
   height: 50px;
   width: 50px;
 }
+
 h1{
   font-size: 3rem;
 }

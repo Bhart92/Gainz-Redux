@@ -97,8 +97,6 @@ export const workoutData = [
 		url: 'https://www.youtube.com/watch?v=Iwe6AmxVf7o'
 	},
 
-
-
 	{
 		name: 'Bent-Over-Row',
 		value: 'back',
@@ -207,9 +205,6 @@ export const workoutData = [
 		icon: '../images/back.svg',
 		url:'https://www.youtube.com/watch?v=vKPGe8zb2S4'
 	},
-
-
-
 
 	{
 		name: 'Military Press',
@@ -499,8 +494,6 @@ export const workoutData = [
 		url:'https://www.youtube.com/watch?v=vmEQ46uAN8Q'
 	},
 
-
-
 	{
 		name: 'Dumbbell Seated Supination',
 		value: 'forearms',
@@ -561,9 +554,6 @@ export const workoutData = [
 		icon: '../images/muscles.svg',
 		url:'https://www.youtube.com/watch?v=didEQUuieRQ'
 	},
-
-	
-
 
 	{
 		name: 'Single Leg Lunge',
@@ -722,9 +712,6 @@ export const workoutData = [
 		url:'https://www.youtube.com/watch?v=ORT4oJ_R8Qs'
 	},
 
-
-
-
 	{
 		name: 'Push Crunch',
 		value: 'abs',
@@ -852,11 +839,6 @@ export const workoutData = [
 		url:'https://www.youtube.com/watch?v=NZ1oOuj2L2k'
 	},
 
-
-
-
-
-
 	{
 		name: 'Treadmill',
 		value: 'cardio',
@@ -930,11 +912,6 @@ export const workoutData = [
 		url:'https://www.youtube.com/watch?v=bSfy6jcgpWY'
 	},
 
-	
-
-
-
-	
 	{
 		name: 'Split Snatch',
 		value: 'kettlebells',
@@ -1037,8 +1014,6 @@ export const workoutData = [
 		icon: '../images/kettlebell.svg',
 		url:'https://www.youtube.com/watch?v=giVMyWK_xHc'
 	}
-	
-
 ];
 
 const WorkoutContext = React.createContext(workoutData);

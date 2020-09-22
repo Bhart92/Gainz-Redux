@@ -13,6 +13,7 @@
     font-size: 4rem;
     padding: 10px;
     margin: -10px;
+    z-index: 101;
     &:hover{
       cursor: pointer;
     }
@@ -20,9 +21,7 @@
   .ReactModal__Overlay{
     background: transparent!important;
     transition: opacity 200ms ease-in-out;
-
   }
-
   .modal--container{
     position: relative;
     height: 100%;
@@ -42,8 +41,7 @@
         transition: all .35s ease;
         &:hover{
           cursor: pointer;
-          color: $orange;
-
+          color: $green;
         }
       }
     }
@@ -60,14 +58,17 @@
   .fa-cog{
       transition: all .35s ease;
       &:hover{
-          color: $orange;
+          color: $green;
       }
   }
   .cog-active{
-    color: $orange;
+    color: $green;
     animation-name: spin;
     animation-duration: 5000ms!important;
     animation-iteration-count: infinite;
     animation-timing-function: linear; 
+  }
+  .overflow{
+    overflow: hidden!important;
   }
 

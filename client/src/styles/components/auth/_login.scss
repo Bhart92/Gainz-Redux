@@ -1,55 +1,75 @@
-.login--container{
-    @extend .register--container;
+
+.login--input-box{
+    width: 50%;
+    &:nth-of-type(2){
+        margin-bottom: 25px;
+    }
+    input{
+        margin: 15px 5px 5px 5px;
+        outline: none;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid #66A182;
+        color: #EEE;
+        opacity: .5;
+        width: 235px;
+        text-align: left;
+        padding: 0 0 10px 10px;
+    }
 }
-.login--login--dividser{
-    margin: 10px 0;
-    width: 100%;
-    text-align: center;
-}
-.login--footer{
-    position: absolute;
-    bottom: -20px;
-    font-size: .87rem;
-&:last-of-type{
-    bottom: -40px;
-}
+.login--input-box__small{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column-reverse;
+        margin: 0 0px 0 0;
+        a{
+            margin: 5px 0;
+        }
+        small{
+            margin: 20px 0;
+        }
 }
 .login--title{
     font-size: 2rem;
 }
 .login--input-container{
-    height: 425px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    div{
-        width: 100%;
+    padding-left: 7rem;
+}
+.login--input-box{
+    width: 50%;
+    &:nth-of-type(2){
+        margin-bottom: 25px;
     }
-    .login--input-box{
-        margin: 10px 0;
-        background: #FFF!important;
-        padding: 5px 10px;
-        width: 40%;
-        height: 35px;
+    input{
+        margin: 15px 5px 5px 5px;
         outline: none;
-        border:none;
-        border-bottom: none;
-        transition: all .35s ease;
-        &:focus{
-            border-bottom: 2px solid deepskyblue
-        }
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid #66A182;
+        color: #EEE;
+        opacity: .5;
+        width: 235px;
+        text-align: left;
+        padding: 0 0 10px 10px;
+    }
+}
+.login--container{
+    background: #393E46;
+    box-shadow: 0 0 5px -0.5px #66A182;
+    height: auto;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: space-evenly;
+    color: #EEE;
+    width: 75%;
+    margin: 0 auto;
+    h1{
+        width: 70%;
+        margin: 16px auto 0 auto;
     }
 }
 
-@media only screen and (width: 1024px) and (height: 1366px){
-    .login--container {
-        width: 30%;
-    }
-}
-@media only screen and (max-width: 700px){
-    .login--input-container .login--input-box{
-        width: 65%;
-    }
-}
 

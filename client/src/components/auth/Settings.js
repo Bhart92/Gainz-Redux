@@ -17,18 +17,20 @@ const Settings = ({ logout, isAuthenticated, deleteAccount }) => {
           borderRadius          : '10px',
           background            : '#393E46',
           border                : 'none',
-          boxShadow            : '0 0 5px -0.5px #D65A31'
+          boxShadow            : '0 0 5px -0.5px #66A182'
         }
     };
     const [modalIsOpen, setIsOpen] = useState(false);
     function openModal() {
-          setIsOpen(true);
-          document.querySelector('.fa-cog').classList.toggle('cog-active')
+        setIsOpen(true);
+        document.querySelector('.fa-cog').classList.toggle('cog-active');
+        document.querySelector('body').classList.toggle('overflow');
 
     }
     function closeModal(){
-            setIsOpen(false);
-            document.querySelector('.fa-cog').classList.toggle('cog-active')
+        setIsOpen(false);
+        document.querySelector('.fa-cog').classList.toggle('cog-active');
+        document.querySelector('body').classList.toggle('overflow');
     }
     return (
         <Fragment>
@@ -43,30 +45,34 @@ const Settings = ({ logout, isAuthenticated, deleteAccount }) => {
             closeTimeoutMS={200}
             contentLabel="Example Modal"
             ariaHideApp={false}
-        >
+            >
                 <div id='modal--container' className='modal--container'> 
                     <ul>
-                        <li onClick={() => deleteAccount()}>
-                        <i class="fas fa-user-times"></i> &nbsp;Delete Account
+                        <li onClick={() => {
+                            document.querySelector('body').classList.toggle('overflow');
+                            deleteAccount()
+                        }}>
+                            <i class="fas fa-user-times"></i> &nbsp;Delete Account
                         </li>
-                        <li onClick={e => logout()}>
-                        <i class="fas fa-sign-out-alt"></i> &nbsp;Logout
+                        <li onClick={e => {
+                            document.querySelector('body').classList.toggle('overflow');
+                            logout()
+                        }}>
+                            <i class="fas fa-sign-out-alt"></i> &nbsp;Logout
                         </li>
                     </ul>
                 </div>
-                <div></div>
             </Modal>
         </Fragment>
     );
 };
 
 Settings.propTypes = {
-    isAuthenticated: PropTypes.object.isRequired
+    isAuthenticated: PropTypes.bool.isRequired
 };
 
 const mapStateToProps = state => ({
     isAuthenticated: state.auth.isAuthenticated
 });
-
 
 export default connect(mapStateToProps, {logout, deleteAccount})(Settings);

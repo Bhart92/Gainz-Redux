@@ -1,0 +1,464 @@
+@media (min-width: 1400px){
+    html {
+        font-size: 73%;
+      }
+}
+@media (max-width: 1450px){
+    .register--container{
+        display: flex;
+        height: auto;
+        width: 90%;
+        margin: 0 auto;
+        flex-direction: column;
+        text-align: center;
+        border-right: 0.5px solid lighten($orange, 20%);
+        border-left: 0.5px solid lighten($orange, 20%);
+        overflow-y: scroll;
+    }
+}
+@media(width: 1024px) and (height: 1366px){
+    html{
+        font-size: 85%;
+    }
+    a{
+        font-size: 2rem;
+    }
+    .container {
+        width: 75%;
+    }
+    .dashboard--container {
+        min-width: 95%;
+    }
+    .header a{
+        font-size: 1.75rem;
+    }
+    .header ul{
+        padding-left: 25px;
+    }
+    .header--h1{
+        margin-top: 5px;
+        a{
+            font-size: 3.5rem;
+        }
+    }
+    .generate--form-container{
+        h1{
+            font-size: 4rem;;
+        }
+    }
+    .generate--form-select {
+        font-size: 2.15rem;
+    }
+    .random-workout--inner-container{
+        height: 250px;
+        width: 85%;
+        .random-workout__placeholder{
+            text-align: center;
+        }
+        p{
+            font-size: 1.75rem;
+            text-align: left;
+        }
+    }
+    .button__save__individual-workout {
+        padding: 10px 20px;
+    }
+    .button--container span {
+        font-size: 1.85rem;
+    }
+    .saved--workout-wrapper p, .saved--workout-details + a {
+        font-size: 1.75rem;
+    }
+    .saved--title {
+        font-size: 4rem;
+        h2{
+            font-size: 1.75rem;
+        }
+    }
+    .help {
+        width: 93%;
+    }
+    .help--h1 {
+        font-size: 2.75rem;
+        text-align: center;
+    }
+    .help .help--list-container ol {
+        padding-left: 15px;
+        li{
+            font-size: 1.85rem;
+            text-align: justify;
+            width: 85%;
+        }
+    }
+    .iconDiv {
+        font-size: .9rem;
+        a{
+          font-size: .9rem;
+        }
+    }
+    .register--input-box__small input[type='submit'], .register--input-box__small .create-button {
+        padding: 10px 20px;
+    }
+    .register--input-box input {
+        font-size: 1.5rem;
+    }
+    .register--input-box__small input[type='submit']{
+        padding: 15px 25px;
+        font-size: 1.15rem;
+    }
+    .register--footer{
+        small, p{
+            font-size: 1rem;
+        }
+    }
+}
+@media (max-width: 800px){
+    a{
+        font-size: 2rem;
+    }
+    .container {
+        width: 75%;
+    }
+    .dashboard--container {
+        min-width: 95%;
+    }
+    .header a{
+        font-size: 1.75rem;
+    }
+    .header ul{
+        padding-left: 25px;
+    }
+    .header--h1{
+        margin-top: 5px;
+        a{
+            font-size: 3.5rem;
+        }
+    }
+    .generate--form-container{
+        h1{
+            font-size: 3.5rem;
+            text-align: center;
+        }
+    }
+    .generate--form-select {
+        font-size: 2.15rem;
+    }
+    .random-workout--inner-container{
+        height: 250px;
+        width: 85%;
+        .random-workout__placeholder{
+            text-align: center;
+        }
+        p{
+            font-size: 1.75rem;
+            text-align: left;
+        }
+    }
+    .button__save__individual-workout {
+        padding: 10px 20px;
+    }
+    .button--container span {
+        font-size: 1.85rem;
+    }
+    .saved--workout-wrapper p, .saved--workout-details + a {
+        font-size: 1.75rem;
+    }
+    .saved--title {
+        font-size: 4rem;
+        h2{
+            font-size: 1.75rem;
+        }
+    }
+    .help {
+        width: 93%;
+    }
+    .help--h1 {
+        font-size: 2.75rem;
+        text-align: center;
+    }
+    .help .help--list-container ol {
+        padding-left: 15px;
+        li{
+            font-size: 1.85rem;
+            text-align: justify;
+            width: 85%;
+        }
+    }
+    .iconDiv {
+        font-size: .9rem;
+        a{
+          font-size: .9rem;
+        }
+    }
+      .spinner-container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .register--container {
+        width: 95%;
+    }
+}
+@media (max-width: 700px){
+    .register--input-box {
+        flex-direction: column;
+    } 
+    .register--container .form textarea {
+        width: 90%;
+    }
+}
+@media (max-width: 650px){
+    #root{
+        padding-top: 52.8px;
+        min-height: auto;
+    }
+    .container.register{
+        height: auto!important;
+    }  
+    .header{
+        padding: 0 0 0 10px;
+        margin-top: -52.8px;
+        div{
+            &:first-of-type{
+                width: 35%;
+            }
+            &:last-of-type{
+                width: 65%;
+            }
+        }
+        ul li{
+            margin: 0;
+        }
+    }
+    .dashboard--container {
+        width: 95%;
+    }
+    .generate--form h1 {
+        font-size: 3.5rem;
+    }
+    .generate--form-select {
+        width: 80%;
+        font-size: 1.85rem;
+    }
+    .saved--workout-details {
+        flex-basis: 75%;
+    }
+    .button {
+        font-size: 1.75rem;
+        height: 100px;
+        letter-spacing: 3px;
+        width: 85%;
+    }
+    .random-workout--inner-container {
+        height: 295px!important;
+        width: 100%;
+    }
+    .random-workout--item {
+        width: 92%;
+    }
+    .random-workout--inner-container p {
+        font-size: 1.78rem;
+    }
+    .button--container span {
+        font-size: 1.65rem;
+    }
+    .saved--workout--wrapper-box {
+        margin: 10px 0;
+    }
+    .saved--title {
+        font-size: 3.5rem;
+    }
+    .saved--title h2 {
+        font-size: 1.5rem;
+    }
+    .saved--workout-wrapper {
+        width: 85%;
+    }
+    .landing--container--h1 {
+        font-size: 6rem;
+        margin-bottom: unset;
+        text-align: center;
+    }
+    .landing--container span {
+        font-size: 2rem;
+        margin-top: unset;
+    }
+    .button__landing {
+        font-size: 2.25rem;
+        outline: none;
+        padding: 15px 20px;
+        width: 85%;
+    }
+    .help {
+        width: 93%;
+    }
+    .help--h1 {
+        font-size: 2.75rem;
+        text-align: center;
+    }
+    .help .help--list-container ol {
+        li{
+            font-size: 1.75rem;
+        }
+    }
+    .iconDiv {
+        font-size: .9rem;
+    }
+    .settings--icon {
+        position: absolute;
+        bottom: -80px;
+        right: 3px;
+    }
+    .ReactModal__Content{
+        top: 50%!important;
+        left: 50%!important;
+        bottom: unset;
+        right: unset;
+        transform: translate(-50%, -50%);
+        width: 90%!important;
+        height: 225px!important;
+    }.ReactModal__Overlay {
+        background: $black !important;
+        z-index: 100;
+    }
+    .modal--container ul {
+        padding: 50px 50px;
+        height: 100%;
+    }
+    .modal--container ul li {
+        font-size: 2rem;
+        margin: 15px 0;
+    }
+    .saved--workout-details + a{
+        font-size: 2rem;
+        margin: -10px;
+        padding: 25px;
+    }
+    .fa-youtube {
+        font-size: 3rem;
+    }
+}
+@media (max-width: 500px){
+    .container {
+        width: 95%;
+    }
+    .landing--button--container{
+        width: 75%;
+        flex-direction: column !important;
+        display: flex;
+        a{
+            padding: 10px 0;
+            width: unset;
+            margin: 5px 0;
+        }
+    }
+    .help .help--list-container ol {
+        padding: unset;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .help .help--list-container ol li {
+         margin: unset;
+    }
+    .help .help--list-container {
+        border: none;
+    }
+}
+@media (max-width: 375px){
+    .header {
+        ul{
+            padding-left: unset;
+            justify-content: unset;
+            li{
+                text-align: right;
+                margin: 20px;
+                a{
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+    .generate--form-container h1 {
+        font-size: 3rem;
+    }
+    .generate--form--select {
+        font-size: 2rem;
+    }
+    .button{
+        font-size: 1.5rem;
+        width: 95%;
+    }
+    .random-workout--container {
+        text-align: center;
+        width: 95%;
+    }
+    .button--container span {
+        font-size: 1.5rem;
+    }
+    .button__landing {
+        font-size: 2.25rem;
+        outline: none;
+        padding: 10px 30px;
+        width: 85%;
+    }
+    .saved--title {
+        font-size: 3rem;
+    }
+    .saved--workout-wrapper {
+        width: 95%;
+    }
+    .register--container {
+        margin-bottom: 2rem;
+    }
+}
+@media (max-width: 335px){
+    .header{
+        ul{
+            padding: unset;
+            li{
+                margin: 20px;
+            }
+        }
+        h1{
+            a{
+                font-size: 3.5rem;
+            }
+        }
+        a{
+            font-size: 1.55rem;
+            padding-left: 5px;
+        }
+    }
+    .saved--workout-wrapper p, .saved--workout-details + a {
+        font-size: 1.45rem;
+    }
+    .saved--title {
+        font-size: 2.75rem;
+    }
+    .saved--title h2 {
+        font-size: 1.4rem;
+    }
+    .generate--form-container h1 {
+        font-size: 2.75rem;
+    }
+    .random-workout--inner-containerr p {
+        font-size: 1.45rem;
+    }
+    .button__save--individual-workout {
+        padding: 5px 17px;
+    }
+    .register--container {
+        height: auto;
+    }
+    .register--container .comment-item--info p, .register--container .comment-item--info p {
+        font-size: .95rem;
+    }
+     .register--container .comment-item--userTitle h4, .register--container .comment-item--userTitle h4 {
+        font-size: 1.05rem;
+    }
+}

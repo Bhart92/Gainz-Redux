@@ -1,9 +1,7 @@
-import { SAVE_TEMP_WORKOUTS, SAVE_WORKOUTS, RESET_TEMP_WORKOUTS, CLEAR_SAVED_WORKOUT_LIST } from './types';
 import axios from 'axios';
+import { SAVE_TEMP_WORKOUTS, SAVE_WORKOUTS, RESET_TEMP_WORKOUTS, CLEAR_SAVED_WORKOUT_LIST } from './types';
 import { setAlert } from './alert';
 import { loadUser } from './auth';
-
-
 
 export const saveTempWorkouts = (workouts) => dispatch => {
     dispatch({
@@ -62,3 +60,18 @@ export const resetWorkouts = (workouts) => dispatch => {
         type: RESET_TEMP_WORKOUTS
     })
 };
+
+//remove any duplicate objects in an array based off of the second parameter passed in
+export const getUnique = (arr, comparison) => {
+
+  // store the comparison  values in array
+  const unique =  arr.map(e => e[comparison])
+
+  // store the indexes of the unique objects
+  .map((e, i, final) => final.indexOf(e) === i && i)
+
+  // eliminate the false indexes & return unique objects
+  .filter((e) => arr[e]).map(e => arr[e]);
+
+return unique;
+}

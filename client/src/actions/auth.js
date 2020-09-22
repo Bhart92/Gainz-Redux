@@ -1,4 +1,5 @@
 import axios from 'axios';
+import setAuthToken from '../utils/setAuthToken';
 import { setAlert } from './alert';
 import {
     REGISTER_SUCCESS,
@@ -11,7 +12,6 @@ import {
     CLEAR_PROFILE,
     ACCOUNT_DELETED
 } from '../actions/types';
-import setAuthToken from '../utils/setAuthToken';
 
 
 //Load User

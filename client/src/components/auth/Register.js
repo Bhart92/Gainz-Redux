@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import {Link, Redirect} from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setAlert } from '../../actions/alert';
 import { register } from '../../actions/auth';
-import PropTypes from 'prop-types';
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
     const [formData, setFormData] = useState({
@@ -28,52 +28,53 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             register({ email, password });
         }
     };
-    //Redirect if logged in
+    
     if(isAuthenticated){
         return <Redirect to="/dashboard" />
     }
+
     return (
-    <div className='container register'>
-        <div className='auth--container'>
-            <div className='post--container register--container'>
-                <h1>Sign Up</h1>
-                <p><i className="fas fa-user"></i> Create Your Account</p>
-                <div>
-                    <form onSubmit={e => onSubmit(e)}>
-                        <div className='register--input-box'>
-                        <input
-                            type="email"
-                            placeholder="Email Address"
-                            name="email"
-                            value={email}
-                            onChange={e => onChange(e)}
-                        />
-                        </div>
-                        <div className='register--input-box'>
-                        <input
-                            type="password"
-                            placeholder="Password"
-                            name="password"
-                            minLength="6"
-                            onChange={e => onChange(e)}
-                        />
-                        <input
-                            type="password"
-                            placeholder="Confirm Password"
-                            name="password2"
-                            minLength="6"
-                            onChange={e => onChange(e)}      
-                        />
-                        </div>
-                        <div className='register--input-box__small'>
-                            <Link to='/'>Go Back</Link>
-                            <input className='button__landing button__reset' type='submit' value='Register' />
-                        </div>
-                    </form>
+        <div className='container register'>
+            <div className='auth--container'>
+                <div className='post--container register--container'>
+                    <h1>Sign Up</h1>
+                    <p><i className="fas fa-user"></i> Create Your Account</p>
+                    <div>
+                        <form onSubmit={e => onSubmit(e)}>
+                            <div className='register--input-box'>
+                                <input
+                                    type="email"
+                                    placeholder="Email Address"
+                                    name="email"
+                                    value={email}
+                                    onChange={e => onChange(e)}
+                                />
+                            </div>
+                            <div className='register--input-box'>
+                                <input
+                                    type="password"
+                                    placeholder="Password"
+                                    name="password"
+                                    minLength="6"
+                                    onChange={e => onChange(e)}
+                                />
+                                <input
+                                    type="password"
+                                    placeholder="Confirm Password"
+                                    name="password2"
+                                    minLength="6"
+                                    onChange={e => onChange(e)}      
+                                />
+                            </div>
+                            <div className='register--input-box__small'>
+                                <Link to='/'>Go Back</Link>
+                                <input className='button__landing button__reset' type='submit' value='Register' />
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     );
 };
 

@@ -5,13 +5,12 @@ import RandomDisplay from './RandomDisplay';
 const Dashboard = (props) => {
     return(
         <section className='container'>
-        <div className='dashboard--container'>
-            <Form />
-            <RandomDisplay />
-        </div>
+            <div className='dashboard--container'>
+                <Form />
+                <RandomDisplay />
+            </div>
         </section>
-
-        )
+        );
     };
 
 export default Dashboard;

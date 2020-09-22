@@ -8,7 +8,9 @@ const { check, validationResult } = require('express-validator');
 
 const User = require('../../models/User');
 
-// Save User workout list to DB
+// @route  POST api/workouts
+// @desc   Save User workout list to DB
+// @access Private
 router.post('/', [auth], async (req, res) => {
     const { workouts } = req.body;
     try {
@@ -16,37 +18,37 @@ router.post('/', [auth], async (req, res) => {
         user.savedWorkoutList.push(...workouts);
         await user.save();
         res.json(user.savedWorkoutList)
-
     } catch (err) {
         console.log(err)
         res.status(500).send("Server error");
     }
 });
-//Load users saved workouts
+
+// @route  GET api/workouts
+// @desc   Load users saved workouts
+// @access Private
 router.get('/', [auth], async (req, res) => {
     try {
         const user = await User.findById(req.user.id).select('-password');
-
-            console.log(user)
         res.json(user)
-
     } catch (err) {
-        console.log(err)
-        res.status(500).send("Server error");    }
-
+        res.status(500).send("Server error");
+    }
 });
-//Clear User workout List in DB
+
+// @route  PUT api/workouts
+// @desc   Clear User workout List in DB
+// @access Private
 router.put('/', [auth], async (req, res) => {
     try {
         const user = await User.findOne({ _id: req.user.id });
         user.savedWorkoutList = [];
         await user.save();
         res.json(user.savedWorkoutList)
-
     } catch (err) {
-        console.log(err)
         res.status(500).send("Server error");
     }
 
 });
+
 module.exports = router;

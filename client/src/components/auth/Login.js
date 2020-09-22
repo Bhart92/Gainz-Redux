@@ -13,22 +13,24 @@ const Login = ({ login, isAuthenticated }) => {
     const { email, password } = formData;
 
     const onChange = e => setFormData({...formData,[e.target.name]:e.target.value});
+    
     const onSubmit = async e => {
         e.preventDefault();
         login(email, password);
     };
-    //Redirect if logged in
+
     if(isAuthenticated){
         return <Redirect to='/dashboard' />;
     }
+
     return (
         <div className='container register'>
             <div className='auth--container'>
-                <div className='post--container register--container'>
-                    <h1>Login</h1>
-                    <div>
+                <div className='post--container login--container'>
+                    <h1><i class="fas fa-sign-in-alt"></i> Login</h1>
+                    <div className='form--container'>
                         <form className='login--input-container' onSubmit={e => onSubmit(e)}>
-                        <div className='register--input-box'>
+                            <div className='login--input-box'>
                                 <input
                                 type="email"
                                 placeholder="Email Address"
@@ -37,6 +39,8 @@ const Login = ({ login, isAuthenticated }) => {
                                 value={email}
                                 onChange={e => onChange(e)}
                                 required/>
+                            </div>
+                            <div className='login--input-box'>
                                  <input
                                     type="password"
                                     placeholder="Password"
@@ -46,8 +50,8 @@ const Login = ({ login, isAuthenticated }) => {
                                     onChange={e => onChange(e)}
                                     required
                                 />
-                                </div>
-                            <div className='register--input-box__small'>
+                            </div>
+                            <div className='login--input-box__small'>
                                 <input type="submit" className='button__landing button__reset' value="Sign In" />
                             </div>
                         </form>
@@ -59,7 +63,6 @@ const Login = ({ login, isAuthenticated }) => {
                 </div>
             </div>
         </div>
-
     );
 };
 Login.propTypes = {
