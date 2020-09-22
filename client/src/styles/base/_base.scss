@@ -69,8 +69,8 @@ a{
   .container{
     align-items: center;
     background: $grey;
-    -webkit-box-shadow: 0 0 5px -.5px green;
-    box-shadow: 0 0 5px -.5px green;
+    -webkit-box-shadow: 0 0 5px -.5px $green;
+    box-shadow: 0 0 5px -.5px $green;
     display: flex;
     height: auto;
     flex-direction: column;
