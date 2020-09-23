@@ -12,7 +12,7 @@ const User = require('../../models/User');
 // @desc   Register user
 // @access Public
 router.post('/', [
-    check('username', 'Please include a valid username').isusername(),
+    check('username', 'Please include a valid username').exists(),
     check('password', 'Password must be at least five characters. PLease try again').isLength({ min: 5 })
 ], async (req, res) => {
     const errors = validationResult(req);
