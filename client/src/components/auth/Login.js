@@ -6,17 +6,17 @@ import { login } from '../../actions/auth';
 
 const Login = ({ login, isAuthenticated }) => {
     const [formData, setFormData] = useState({
-        email: '',
+        username: '',
         password: ''
     });
 
-    const { email, password } = formData;
+    const { username, password } = formData;
 
     const onChange = e => setFormData({...formData,[e.target.name]:e.target.value});
     
     const onSubmit = async e => {
         e.preventDefault();
-        login(email, password);
+        login(username, password);
     };
 
     if(isAuthenticated){
@@ -32,11 +32,11 @@ const Login = ({ login, isAuthenticated }) => {
                         <form className='login--input-container' onSubmit={e => onSubmit(e)}>
                             <div className='login--input-box'>
                                 <input
-                                type="email"
-                                placeholder="Email Address"
-                                name="email"
+                                type="username"
+                                placeholder="Username"
+                                name="username"
                                 className='login--input-box'
-                                value={email}
+                                value={username}
                                 onChange={e => onChange(e)}
                                 required/>
                             </div>

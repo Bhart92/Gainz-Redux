@@ -7,13 +7,13 @@ import { register } from '../../actions/auth';
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
     const [formData, setFormData] = useState({
-        email: '',
+        username: '',
         password: '',
         password2: ''
     });
 
     const {
-        email,
+        username,
         password,
         password2
     } = formData;
@@ -25,7 +25,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
         if(password !== password2){
             setAlert('passwords dont match');
         } else{
-            register({ email, password });
+            register({ username, password });
         }
     };
     
@@ -44,10 +44,10 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                             <div className='register--input-box'>
                                 <input
                                     required
-                                    type="email"
-                                    placeholder="Email Address"
-                                    name="email"
-                                    value={email}
+                                    type="username"
+                                    placeholder="Username"
+                                    name="username"
+                                    value={username}
                                     onChange={e => onChange(e)}
                                 />
                             </div>
