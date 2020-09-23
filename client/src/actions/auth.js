@@ -81,7 +81,6 @@ export const register = ({ username, password }) => async (dispatch) => {
   };
 
   const body = JSON.stringify({ username, password });
-    console.log(body)
   try {
     const res = await axios.post('/api/users', body, config);
 
