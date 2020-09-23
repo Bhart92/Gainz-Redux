@@ -23,7 +23,7 @@ router.get('/', auth, async (req, res) => {
 // @desc   authenticate user and get token
 // @access Public
 router.post('/', [
-    check('username', 'Please include a valid username').isusername(),
+    check('username', 'Please include a valid username').exists(),
     check('password', 'Password is requried').exists()
 ], async (req, res) => {
 
